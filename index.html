@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Meu Portfólio</title>
+  <meta name="description" content="Portfólio pessoal — projetos, sobre mim e contato" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#home">Portfólio</a>
+      <nav class="nav" aria-label="Navegação principal">
+        <a href="#home">Início</a>
+        <a href="#about">Sobre Mim</a>
+        <a href="#projects">Projetos</a>
+        <a href="#contact">Contato</a>
+      </nav>
+      <div class="header-actions">
+        <a href="https://github.com/edsette" target="_blank" rel="noopener" aria-label="GitHub" class="social-icon">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/sette-edu" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-icon">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <button id="theme-toggle" aria-label="Alternar tema">Moon</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero" aria-label="Seção Início">
+      <div class="container hero-inner fade-in-up">
+       <div class="hero-text">
+        <h1>Olá, eu sou <span class="name">Eduardo Sette</span></h1>
+  
+  <!-- TÍTULO DE IMPACTO (substitui o parágrafo longo) -->
+  <p class="hero-title">
+    Transformo ideias em <span class="highlight">sites rápidos</span> e <span class="highlight">suporte técnico eficiente</span>
+  </p>
+
+  <!-- CTA com ícones e micro-animação -->
+  <div class="hero-ctas">
+    <a class="btn primary" href="#projects">
+      <i class="fas fa-rocket"></i> Ver Projetos
+    </a>
+    <a class="btn ghost" href="#contact">
+      <i class="fab fa-whatsapp"></i> Falar no WhatsApp
+    </a>
+  </div>
+</div>
+        <div class="hero-visual">
+          <div class="draggable-icons" aria-hidden="true">
+            <svg class="icon" draggable="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="var(--accent)"/></svg>
+            <svg class="icon" draggable="true" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="4" fill="var(--primary)"/></svg>
+          </div>
+          <img src="img/perfil-t.png" alt="Foto de perfil" class="perfil">
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about container fade-in-up" aria-label="Sobre Mim">
+      <h2>Sobre Mim</h2>
+      <div class="about-grid">
+        <div>
+          <p>Sou desenvolvedor web especializado na criação de sites institucionais e estáticos, com foco em design limpo, responsivo e otimizado para performance. Trabalho há mais de um ano na área, desenvolvendo soluções modernas para empresas e profissionais que precisam de presença digital sólida, rápida e bem estruturada.
+          <br>Embora resida atualmente na Europa, realizo projetos para clientes de qualquer lugar do mundo, garantindo comunicação clara, prazos bem definidos e entregas consistentes. Meu objetivo é transformar ideias em websites funcionais, seguros e fáceis de manter, utilizando boas práticas de desenvolvimento e ferramentas atualizadas do ecossistema web.</p>
+          <h3>Competências</h3>
+          <ul class="skills">
+            <li>HTML5</li>
+            <li>CSS3 (Flexbox / Grid)</li>
+            <li>JavaScript (ES6+)</li>
+            <li>Design responsivo / Mobile-first</li>
+            <li>Git & GitHub</li>
+            <li>Hospedagem e Deploy (Vercel, Netlify, HostGator)</li>
+            <li>Configuração de Domínio</li>
+            <li>SEO básico</li>
+          </ul>
+        </div>
+        <div class="glass-card">
+          <h4>Resumo</h4>
+          <p>Desenvolvedor web focado em sites institucionais, landing pages e páginas estáticas de alta performance. Entrego projetos rápidos, responsivos e estruturados com código limpo. Trabalho com clientes internacionais e adapto-me facilmente a diferentes necessidades e setores.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="projects container" aria-label="Projetos">
+      <h2>Projetos</h2>
+      <div id="projects-grid" class="projects-grid" role="list">
+        <!-- Cards injetados via JS -->
+      </div>
+    </section>
+
+    <section id="contact" class="contact container fade-in-up" aria-label="Contato">
+      <h2>Contato</h2>
+      <p class="contact-text">Tem um projeto em mente ou precisa de suporte técnico? <br>Envie-me uma mensagem no WhatsApp e conversamos!</p>
+      <a href="https://wa.me/351924781513?text=Olá%20Eduardo!%20Vi%20seu%20portfólio%20e%20gostaria%20de%20conversar." 
+         target="_blank" 
+         rel="noopener" 
+         class="btn primary whatsapp-btn">
+        <i class="fab fa-whatsapp"></i> Falar no WhatsApp
+      </a>
+    </section>
+  </main>
+
+  <!-- Botão flutuante do WhatsApp -->
+  <a href="https://wa.me/351924781513?text=Olá%20Eduardo!%20Vi%20seu%20portfólio%20e%20gostaria%20de%20conversar." 
+     target="_blank" 
+     rel="noopener" 
+     class="whatsapp-float" 
+     aria-label="Fale comigo no WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> Eduardo Sette</div>
+      <div class="socials">
+        <a href="https://github.com/edsette" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/sette-edu/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
