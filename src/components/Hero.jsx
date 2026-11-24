@@ -3,7 +3,8 @@ import SplitText from '../reactbits/SplitText.jsx';
 import Magnet from '../reactbits/Magnet.jsx';
 import { useRoute, Link } from '../router.jsx';
 import { useT } from '../i18n/index.js';
-import { img, waLink } from '../data.js';
+import { waLink } from '../data.js';
+import PageAssembly from './PageAssembly.jsx';
 import { WhatsAppIcon } from './Icons.jsx';
 
 const rise = delay => ({
@@ -55,20 +56,7 @@ export default function Hero() {
           </motion.div>
         </div>
 
-        <motion.div
-          className="hero__photo"
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3, duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
-        >
-          <div className="hero__arch">
-            <img src={img('perfil.png')} alt={t('hero.photoAlt')} width="375" height="666" fetchPriority="high" />
-          </div>
-          <p className="hero__badge">
-            <i aria-hidden="true" />
-            {t('hero.badge')}
-          </p>
-        </motion.div>
+        <PageAssembly />
       </div>
     </section>
   );

@@ -5,7 +5,7 @@ import { useRoute } from '../router.jsx';
 import { useT } from '../i18n/index.js';
 
 export default function LangSwitcher() {
-  const { lang, page, navigate } = useRoute();
+  const { lang, navigate } = useRoute();
   const t = useT();
   const [open, setOpen] = useState(false);
   const ref = useRef(null);
@@ -26,9 +26,10 @@ export default function LangSwitcher() {
   const choose = code => {
     setOpen(false);
     if (code === lang) return;
-    // Mantém a página atual; na home, mantém a âncora se houver.
-    const rest = page === 'templates' ? 'templates' : '';
-    navigate(`/${code}/${rest}${page === 'home' ? window.location.hash : ''}`);
+    // Mesma página e mesma posição; só troca o prefixo de idioma do caminho atual.
+    const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+    const tail = window.location.pathname.slice(base.length).split('/').filter(Boolean).slice(1).join('/');
+    navigate(`/${code}/${tail}`, { keepScroll: true });
   };
 
   return (
@@ -36,8 +37,8 @@ export default function LangSwitcher() {
       <button
         type="button"
         className="lang__btn"
-        aria-haspopup="listbox"
         aria-expanded={open}
+        aria-controls="lang-list"
         aria-label={`${t('nav.lang')}: ${LANG_NAMES[lang]}`}
         onClick={() => setOpen(o => !o)}
       >
@@ -50,7 +51,7 @@ export default function LangSwitcher() {
         {open && (
           <motion.ul
             className="lang__list"
-            role="listbox"
+            id="lang-list"
             aria-label={t('nav.lang')}
             initial={{ opacity: 0, y: -6 }}
             animate={{ opacity: 1, y: 0 }}
@@ -61,9 +62,8 @@ export default function LangSwitcher() {
               <li key={code}>
                 <button
                   type="button"
-                  role="option"
-                  aria-selected={code === lang}
                   aria-current={code === lang}
+                  autoFocus={code === lang}
                   lang={code}
                   onClick={() => choose(code)}
                 >

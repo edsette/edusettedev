@@ -14,6 +14,7 @@ export default {
     close: 'Close',
     lang: 'Language',
     home: 'Home',
+    main: 'Main navigation',
   },
   hero: {
     eyebrow: 'Eduardo Sette · Landing pages',
@@ -23,6 +24,16 @@ export default {
     ctaSecondary: 'See my work',
     photoAlt: 'Photo of Eduardo Sette',
     badge: 'Booking new projects',
+    assemblyAlt: 'Animation: the parts of a landing page come together to form the page',
+    layers: {
+      nav: 'Menu',
+      hero: 'Hero',
+      cta: 'Button',
+      media: 'Image',
+      cards: 'Services',
+      post: 'Testimonial',
+      footer: 'Footer',
+    },
   },
   bignav: {
     eyebrow: 'Where to start',

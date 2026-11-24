@@ -26,6 +26,13 @@ jobs:
       - run: npm run build
       - name: Página 404 aponta para o site
         run: cp dist/index.html dist/404.html
+      - name: Páginas de cada idioma respondem 200 (não 404)
+        run: |
+          for l in pt es en it de; do
+            mkdir -p dist/$l/templates
+            cp dist/index.html dist/$l/index.html
+            cp dist/index.html dist/$l/templates/index.html
+          done
       - uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}

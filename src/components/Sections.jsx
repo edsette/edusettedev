@@ -80,6 +80,18 @@ export function About() {
         </ScrollReveal>
         <div className="about__grid">
           <div className="about__text" data-reveal>
+            <figure className="about__me">
+              <span className="about__arch">
+                <img src={img('perfil.png')} alt={t('hero.photoAlt')} width="375" height="666" loading="lazy" />
+              </span>
+              <figcaption>
+                <strong>Eduardo Sette</strong>
+                <span className="about__badge">
+                  <i aria-hidden="true" />
+                  {t('hero.badge')}
+                </span>
+              </figcaption>
+            </figure>
             <p>{t('about.p1')}</p>
             <p>{t('about.p2')}</p>
           </div>

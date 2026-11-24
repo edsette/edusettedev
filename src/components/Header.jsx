@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { AnimatePresence, motion } from 'motion/react';
 import { Link, useRoute } from '../router.jsx';
 import { useT } from '../i18n/index.js';
@@ -29,12 +29,25 @@ export default function Header() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
+  const burgerRef = useRef(null);
+  const wasOpen = useRef(false);
   useEffect(() => {
     document.documentElement.classList.toggle('is-locked', open);
-    if (!open) return;
+    // Com o menu aberto, o resto da página fica inerte (o Tab não sai do menu).
+    const behind = document.querySelectorAll('.header, main, .footer, .wa-float, .teaser-wrap');
+    behind.forEach(el => (el.inert = open));
+    if (!open) {
+      if (wasOpen.current) burgerRef.current?.focus();
+      wasOpen.current = false;
+      return;
+    }
+    wasOpen.current = true;
     const onKey = e => e.key === 'Escape' && setOpen(false);
     document.addEventListener('keydown', onKey);
-    return () => document.removeEventListener('keydown', onKey);
+    return () => {
+      document.removeEventListener('keydown', onKey);
+      behind.forEach(el => (el.inert = false));
+    };
   }, [open]);
 
   // Na home o topo é oliva (texto creme); nas outras páginas o cabeçalho já começa sólido.
@@ -47,7 +60,7 @@ export default function Header() {
           <Link className="header__logo" to={`/${lang}/`} aria-label={`Eduardo Sette — ${t('nav.home')}`}>
             Eduardo Sette<em>.</em>
           </Link>
-          <nav className="header__nav" aria-label="Principal">
+          <nav className="header__nav" aria-label={t('nav.main')}>
             {items.map(item => (
               <Link key={item.key} to={item.to}>
                 {item.label}
@@ -59,8 +72,10 @@ export default function Header() {
             <button
               type="button"
               className="header__burger"
+              ref={burgerRef}
               aria-label={t('nav.menu')}
               aria-expanded={open}
+              aria-controls="mobile-menu"
               onClick={() => setOpen(true)}
             >
               <span />
@@ -74,6 +89,7 @@ export default function Header() {
         {open && (
           <motion.div
             className="mmenu"
+            id="mobile-menu"
             role="dialog"
             aria-modal="true"
             aria-label={t('nav.menu')}
