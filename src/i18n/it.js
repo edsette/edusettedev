@@ -1,0 +1,110 @@
+export default {
+  meta: {
+    title: 'Eduardo Sette — Landing page che vendono',
+    description:
+      'Creo landing page veloci, belle e pensate per convertire, con uno sviluppo accelerato dalle migliori IA.',
+    templatesTitle: 'Template di landing page — Eduardo Sette',
+  },
+  nav: {
+    work: 'Lavori',
+    about: 'Chi sono',
+    templates: 'Template',
+    contact: 'Contatti',
+    menu: 'Menu',
+    close: 'Chiudi',
+    lang: 'Lingua',
+    home: 'Home',
+  },
+  hero: {
+    eyebrow: 'Eduardo Sette · Landing page',
+    title: 'Landing page che vendono. Fatte a mano, accelerate dall’IA.',
+    sub: 'Progetto e sviluppo pagine veloci, belle e pensate per trasformare i visitatori in clienti, con il supporto dei migliori strumenti di intelligenza artificiale.',
+    ctaPrimary: 'Scrivimi su WhatsApp',
+    ctaSecondary: 'Vedi i lavori',
+    photoAlt: 'Foto di Eduardo Sette',
+    badge: 'Disponibile per nuovi progetti',
+  },
+  bignav: {
+    eyebrow: 'Da dove iniziare',
+    intro: 'Un sito che vende nasce da una conversazione. Scegli la tua strada.',
+    work: 'Progetti online per clienti reali',
+    about: 'Chi sono e come lavoro',
+    templates: 'Modelli pronti per lanciare più in fretta',
+    contact: 'Raccontami la tua idea e ricevi una proposta',
+    soon: 'In arrivo',
+  },
+  work: {
+    eyebrow: 'Lavori selezionati',
+    title: 'Pagine che stanno già lavorando per qualcuno.',
+    intro: 'Ogni progetto nasce dall’obiettivo del cliente: farsi trovare, ispirare fiducia e generare contatti.',
+    live: 'Vedi online',
+    items: {
+      gabbe: {
+        name: 'Gabbe',
+        type: 'Sito di brand designer',
+        desc: 'Portfolio con animazioni fluide, presentazione dei servizi e contatto diretto su WhatsApp.',
+      },
+      afiacorte: {
+        name: 'Afiacorte',
+        type: 'Sito aziendale',
+        desc: 'Una presenza online chiara per un’azienda locale, con servizi, posizione e richiesta di preventivo.',
+      },
+    },
+  },
+  about: {
+    eyebrow: 'Chi sono',
+    statement:
+      'Unisco occhio da designer, codice pulito e le migliori IA per consegnare in pochi giorni ciò che prima richiedeva settimane, senza trascurare i dettagli.',
+    p1: 'Sono Eduardo, creo landing page. Vivo in Europa e lavoro con clienti in tutto il mondo, completamente da remoto.',
+    p2: 'Ogni pagina è progettata per un solo obiettivo: far agire chi la visita. Veloce sullo smartphone, facile da trovare su Google e con il tuo brand al centro.',
+    processTitle: 'Come lavoro',
+    step1Title: 'Conversazione',
+    step1Text: 'Capisco la tua attività, il tuo pubblico e cosa deve ottenere la pagina.',
+    step2Title: 'Prototipo',
+    step2Text: 'Con il supporto dell’IA vedi una prima versione in pochi giorni.',
+    step3Title: 'Rifinitura',
+    step3Text: 'Perfezioniamo insieme testi, immagini e dettagli finché non ti rappresenta.',
+    step4Title: 'Online',
+    step4Text: 'La pubblico con dominio, velocità e tutto pronto per accogliere i clienti.',
+  },
+  contact: {
+    eyebrow: 'Contatti',
+    titleA: 'Creiamo la',
+    titleB: 'tua pagina?',
+    text: 'Mandami un messaggio con la tua idea. Rispondo in fretta, con una proposta chiara.',
+    cta: 'Scrivimi su WhatsApp',
+  },
+  footer: {
+    rights: 'Tutti i diritti riservati.',
+  },
+  teaser: {
+    label: 'Template di landing page',
+    soon: 'In arrivo',
+    close: 'Chiudi avviso dei template',
+  },
+  templates: {
+    eyebrow: 'Negozio di template',
+    title: 'Template pronti da lanciare.',
+    intro:
+      'Sto preparando template di landing page con la stessa cura dei progetti su misura. Chiedi di essere avvisato e non perderti il lancio.',
+    soon: 'In arrivo',
+    notify: 'Avvisami',
+    buy: 'Acquista',
+    back: 'Torna alla home',
+    priceSoon: 'Prezzo al lancio',
+    items: {
+      atelier: { name: 'Atelier', category: 'Portfolio per creativi' },
+      brasa: { name: 'Brasa', category: 'Ristorante e caffetteria' },
+      oficio: { name: 'Ofício', category: 'Servizi locali' },
+    },
+  },
+  notFound: {
+    title: 'Pagina non trovata.',
+    back: 'Torna alla home',
+  },
+  whatsapp: {
+    hello: 'Ciao Eduardo! Ho visto il tuo portfolio e vorrei parlare di una landing page.',
+    notify: 'Ciao Eduardo! Avvisami quando uscirà il template {name}.',
+    aria: 'Scrivi a Eduardo su WhatsApp',
+  },
+};

@@ -1,0 +1,110 @@
+export default {
+  meta: {
+    title: 'Eduardo Sette — Landing pages que venden',
+    description:
+      'Creo landing pages rápidas, atractivas y pensadas para convertir, con un desarrollo acelerado por las mejores IA.',
+    templatesTitle: 'Plantillas de landing page — Eduardo Sette',
+  },
+  nav: {
+    work: 'Trabajos',
+    about: 'Sobre mí',
+    templates: 'Plantillas',
+    contact: 'Contacto',
+    menu: 'Menú',
+    close: 'Cerrar',
+    lang: 'Idioma',
+    home: 'Inicio',
+  },
+  hero: {
+    eyebrow: 'Eduardo Sette · Landing pages',
+    title: 'Landing pages que venden. Hechas a mano, aceleradas con IA.',
+    sub: 'Diseño y desarrollo páginas rápidas, atractivas y pensadas para convertir visitas en clientes, con el apoyo de las mejores herramientas de inteligencia artificial.',
+    ctaPrimary: 'Hablar por WhatsApp',
+    ctaSecondary: 'Ver trabajos',
+    photoAlt: 'Foto de Eduardo Sette',
+    badge: 'Agenda abierta para nuevos proyectos',
+  },
+  bignav: {
+    eyebrow: 'Por dónde empezar',
+    intro: 'Una web que vende empieza con una conversación. Elige tu camino.',
+    work: 'Proyectos publicados para clientes reales',
+    about: 'Quién soy y cómo trabajo',
+    templates: 'Plantillas listas para lanzar más rápido',
+    contact: 'Cuéntame tu idea y recibe una propuesta',
+    soon: 'Muy pronto',
+  },
+  work: {
+    eyebrow: 'Trabajos seleccionados',
+    title: 'Páginas que ya están trabajando para alguien.',
+    intro: 'Cada proyecto nace del objetivo del cliente: ser encontrado, transmitir confianza y generar contactos.',
+    live: 'Ver en vivo',
+    items: {
+      gabbe: {
+        name: 'Gabbe',
+        type: 'Web de diseñadora de marcas',
+        desc: 'Portafolio con animaciones suaves, presentación de servicios y contacto directo por WhatsApp.',
+      },
+      afiacorte: {
+        name: 'Afiacorte',
+        type: 'Web corporativa',
+        desc: 'Presencia online clara para una empresa local, con servicios, ubicación y solicitud de presupuesto.',
+      },
+    },
+  },
+  about: {
+    eyebrow: 'Sobre mí',
+    statement:
+      'Combino ojo de diseño, código limpio y las mejores IA para entregar en días lo que antes llevaba semanas, sin descuidar los detalles.',
+    p1: 'Soy Eduardo, creador de landing pages. Vivo en Europa y trabajo con clientes de cualquier lugar del mundo, siempre en línea.',
+    p2: 'Cada página se diseña con un único objetivo: que el visitante actúe. Rápida en el móvil, fácil de encontrar en Google y con tu marca en el centro.',
+    processTitle: 'Cómo trabajo',
+    step1Title: 'Conversación',
+    step1Text: 'Entiendo tu negocio, tu público y lo que la página debe conseguir.',
+    step2Title: 'Prototipo',
+    step2Text: 'Con apoyo de IA, ves una primera versión en pocos días.',
+    step3Title: 'Ajustes',
+    step3Text: 'Pulimos juntos textos, imágenes y detalles hasta que quede a tu gusto.',
+    step4Title: 'Publicada',
+    step4Text: 'La publico con dominio, velocidad y todo listo para recibir clientes.',
+  },
+  contact: {
+    eyebrow: 'Contacto',
+    titleA: '¿Creamos',
+    titleB: 'tu página?',
+    text: 'Envíame un mensaje con tu idea. Respondo rápido y con una propuesta clara.',
+    cta: 'Hablar por WhatsApp',
+  },
+  footer: {
+    rights: 'Todos los derechos reservados.',
+  },
+  teaser: {
+    label: 'Plantillas de landing page',
+    soon: 'Muy pronto',
+    close: 'Cerrar aviso de plantillas',
+  },
+  templates: {
+    eyebrow: 'Tienda de plantillas',
+    title: 'Plantillas listas para lanzar.',
+    intro:
+      'Estoy preparando plantillas de landing page con el mismo cuidado que los proyectos a medida. Pide que te avise y no te pierdas el lanzamiento.',
+    soon: 'Muy pronto',
+    notify: 'Quiero que me avises',
+    buy: 'Comprar',
+    back: 'Volver al inicio',
+    priceSoon: 'Precio en el lanzamiento',
+    items: {
+      atelier: { name: 'Atelier', category: 'Portafolio para creativos' },
+      brasa: { name: 'Brasa', category: 'Restaurante y cafetería' },
+      oficio: { name: 'Ofício', category: 'Servicios locales' },
+    },
+  },
+  notFound: {
+    title: 'Página no encontrada.',
+    back: 'Volver al inicio',
+  },
+  whatsapp: {
+    hello: '¡Hola, Eduardo! Vi tu portafolio y me gustaría hablar sobre una landing page.',
+    notify: '¡Hola, Eduardo! Quiero que me avises cuando se lance la plantilla {name}.',
+    aria: 'Hablar con Eduardo por WhatsApp',
+  },
+};

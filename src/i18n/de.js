@@ -1,0 +1,110 @@
+export default {
+  meta: {
+    title: 'Eduardo Sette — Landingpages, die verkaufen',
+    description:
+      'Ich gestalte schnelle, schöne Landingpages, die konvertieren – entwickelt mit Unterstützung der besten KI-Tools.',
+    templatesTitle: 'Landingpage-Templates — Eduardo Sette',
+  },
+  nav: {
+    work: 'Projekte',
+    about: 'Über mich',
+    templates: 'Templates',
+    contact: 'Kontakt',
+    menu: 'Menü',
+    close: 'Schließen',
+    lang: 'Sprache',
+    home: 'Start',
+  },
+  hero: {
+    eyebrow: 'Eduardo Sette · Landingpages',
+    title: 'Landingpages, die verkaufen. Handgemacht, mit KI beschleunigt.',
+    sub: 'Ich gestalte und entwickle schnelle, schöne Seiten, die Besucher zu Kunden machen – unterstützt von den besten Werkzeugen künstlicher Intelligenz.',
+    ctaPrimary: 'Per WhatsApp schreiben',
+    ctaSecondary: 'Projekte ansehen',
+    photoAlt: 'Foto von Eduardo Sette',
+    badge: 'Offen für neue Projekte',
+  },
+  bignav: {
+    eyebrow: 'Wo anfangen',
+    intro: 'Eine Website, die verkauft, beginnt mit einem Gespräch. Wähle deinen Weg.',
+    work: 'Live-Projekte für echte Kunden',
+    about: 'Wer ich bin und wie ich arbeite',
+    templates: 'Fertige Vorlagen für einen schnelleren Start',
+    contact: 'Erzähl mir deine Idee und erhalte ein Angebot',
+    soon: 'Demnächst',
+  },
+  work: {
+    eyebrow: 'Ausgewählte Projekte',
+    title: 'Seiten, die schon für jemanden arbeiten.',
+    intro: 'Jedes Projekt beginnt mit dem Ziel des Kunden: gefunden werden, Vertrauen schaffen, Anfragen gewinnen.',
+    live: 'Live ansehen',
+    items: {
+      gabbe: {
+        name: 'Gabbe',
+        type: 'Website einer Markendesignerin',
+        desc: 'Portfolio mit sanften Animationen, klarer Leistungsübersicht und direktem Kontakt per WhatsApp.',
+      },
+      afiacorte: {
+        name: 'Afiacorte',
+        type: 'Unternehmenswebsite',
+        desc: 'Ein klarer Online-Auftritt für ein lokales Unternehmen, mit Leistungen, Standort und Angebotsanfrage.',
+      },
+    },
+  },
+  about: {
+    eyebrow: 'Über mich',
+    statement:
+      'Ich verbinde Gestaltung, sauberen Code und die besten KI-Tools, um in Tagen zu liefern, was früher Wochen dauerte – mit Liebe zum Detail.',
+    p1: 'Ich bin Eduardo und baue Landingpages. Ich lebe in Europa und arbeite mit Kunden auf der ganzen Welt – komplett remote.',
+    p2: 'Jede Seite hat ein einziges Ziel: dass Besucher handeln. Schnell auf dem Smartphone, leicht bei Google zu finden und mit deiner Marke im Mittelpunkt.',
+    processTitle: 'So arbeite ich',
+    step1Title: 'Gespräch',
+    step1Text: 'Ich lerne dein Geschäft, deine Zielgruppe und das Ziel der Seite kennen.',
+    step2Title: 'Prototyp',
+    step2Text: 'Mit KI-Unterstützung siehst du in wenigen Tagen eine erste Version.',
+    step3Title: 'Feinschliff',
+    step3Text: 'Gemeinsam verfeinern wir Texte, Bilder und Details, bis alles passt.',
+    step4Title: 'Online',
+    step4Text: 'Ich veröffentliche sie mit Domain, Tempo und allem, was Kunden brauchen.',
+  },
+  contact: {
+    eyebrow: 'Kontakt',
+    titleA: 'Bauen wir',
+    titleB: 'deine Seite?',
+    text: 'Schreib mir kurz deine Idee. Ich antworte schnell und mit einem klaren Angebot.',
+    cta: 'Per WhatsApp schreiben',
+  },
+  footer: {
+    rights: 'Alle Rechte vorbehalten.',
+  },
+  teaser: {
+    label: 'Landingpage-Templates',
+    soon: 'Demnächst',
+    close: 'Template-Hinweis schließen',
+  },
+  templates: {
+    eyebrow: 'Template-Shop',
+    title: 'Templates, bereit zum Start.',
+    intro:
+      'Ich entwickle Landingpage-Templates mit derselben Sorgfalt wie meine Maßanfertigungen. Lass dich benachrichtigen und sei beim Start dabei.',
+    soon: 'Demnächst',
+    notify: 'Benachrichtige mich',
+    buy: 'Kaufen',
+    back: 'Zur Startseite',
+    priceSoon: 'Preis zum Start',
+    items: {
+      atelier: { name: 'Atelier', category: 'Portfolio für Kreative' },
+      brasa: { name: 'Brasa', category: 'Restaurant & Café' },
+      oficio: { name: 'Ofício', category: 'Lokale Dienstleister' },
+    },
+  },
+  notFound: {
+    title: 'Seite nicht gefunden.',
+    back: 'Zur Startseite',
+  },
+  whatsapp: {
+    hello: 'Hallo Eduardo! Ich habe dein Portfolio gesehen und möchte über eine Landingpage sprechen.',
+    notify: 'Hallo Eduardo! Sag mir bitte Bescheid, wenn das Template {name} erscheint.',
+    aria: 'Eduardo per WhatsApp schreiben',
+  },
+};

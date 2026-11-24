@@ -1,0 +1,110 @@
+export default {
+  meta: {
+    title: 'Eduardo Sette — Landing pages that sell',
+    description:
+      'I build fast, beautiful landing pages designed to convert, with development accelerated by the best AI tools.',
+    templatesTitle: 'Landing page templates — Eduardo Sette',
+  },
+  nav: {
+    work: 'Work',
+    about: 'About',
+    templates: 'Templates',
+    contact: 'Contact',
+    menu: 'Menu',
+    close: 'Close',
+    lang: 'Language',
+    home: 'Home',
+  },
+  hero: {
+    eyebrow: 'Eduardo Sette · Landing pages',
+    title: 'Landing pages that sell. Handcrafted, accelerated by AI.',
+    sub: 'I design and build fast, beautiful pages made to turn visitors into customers, backed by the best artificial intelligence tools.',
+    ctaPrimary: 'Chat on WhatsApp',
+    ctaSecondary: 'See my work',
+    photoAlt: 'Photo of Eduardo Sette',
+    badge: 'Booking new projects',
+  },
+  bignav: {
+    eyebrow: 'Where to start',
+    intro: 'A website that sells starts with a conversation. Pick your path.',
+    work: 'Live projects built for real clients',
+    about: 'Who I am and how I work',
+    templates: 'Ready-made templates to launch faster',
+    contact: 'Share your idea and get a proposal',
+    soon: 'Coming soon',
+  },
+  work: {
+    eyebrow: 'Selected work',
+    title: 'Pages already working for someone.',
+    intro: 'Every project starts from the client’s goal: get found, build trust and bring in leads.',
+    live: 'View live',
+    items: {
+      gabbe: {
+        name: 'Gabbe',
+        type: 'Brand designer website',
+        desc: 'Portfolio with smooth animations, a clear services overview and direct contact via WhatsApp.',
+      },
+      afiacorte: {
+        name: 'Afiacorte',
+        type: 'Business website',
+        desc: 'A clear online presence for a local company, with services, location and quote requests.',
+      },
+    },
+  },
+  about: {
+    eyebrow: 'About',
+    statement:
+      'I combine a designer’s eye, clean code and the best AI tools to deliver in days what used to take weeks — without losing care for the details.',
+    p1: 'I’m Eduardo, a landing page creator. I live in Europe and work with clients anywhere in the world, fully remote.',
+    p2: 'Every page is designed for one goal: getting the visitor to act. Fast on mobile, easy to find on Google, and with your brand at the center.',
+    processTitle: 'How I work',
+    step1Title: 'Conversation',
+    step1Text: 'I learn about your business, your audience and what the page needs to achieve.',
+    step2Title: 'Prototype',
+    step2Text: 'With AI in the loop, you see a first version within days.',
+    step3Title: 'Refinement',
+    step3Text: 'We polish copy, images and details together until it feels like you.',
+    step4Title: 'Live',
+    step4Text: 'I launch it with your domain, top speed and everything ready for customers.',
+  },
+  contact: {
+    eyebrow: 'Contact',
+    titleA: 'Shall we build',
+    titleB: 'your page?',
+    text: 'Send me a message about your idea. I reply quickly, with a clear proposal.',
+    cta: 'Chat on WhatsApp',
+  },
+  footer: {
+    rights: 'All rights reserved.',
+  },
+  teaser: {
+    label: 'Landing page templates',
+    soon: 'Coming soon',
+    close: 'Dismiss templates notice',
+  },
+  templates: {
+    eyebrow: 'Template shop',
+    title: 'Templates ready to launch.',
+    intro:
+      'I’m crafting landing page templates with the same care as my custom projects. Ask to be notified and be first in line at launch.',
+    soon: 'Coming soon',
+    notify: 'Notify me',
+    buy: 'Buy',
+    back: 'Back to home',
+    priceSoon: 'Price at launch',
+    items: {
+      atelier: { name: 'Atelier', category: 'Portfolio for creatives' },
+      brasa: { name: 'Brasa', category: 'Restaurant & café' },
+      oficio: { name: 'Ofício', category: 'Local services' },
+    },
+  },
+  notFound: {
+    title: 'Page not found.',
+    back: 'Back to home',
+  },
+  whatsapp: {
+    hello: 'Hi Eduardo! I saw your portfolio and would like to talk about a landing page.',
+    notify: 'Hi Eduardo! Please let me know when the {name} template launches.',
+    aria: 'Chat with Eduardo on WhatsApp',
+  },
+};
