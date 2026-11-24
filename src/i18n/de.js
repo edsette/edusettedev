@@ -20,8 +20,6 @@ export default {
     eyebrow: 'Eduardo Sette · Landingpages',
     title: 'Landingpages, die verkaufen. Handgemacht, mit KI beschleunigt.',
     sub: 'Ich gestalte und entwickle schnelle, schöne Seiten, die Besucher zu Kunden machen – unterstützt von den besten Werkzeugen künstlicher Intelligenz.',
-    ctaPrimary: 'Per WhatsApp schreiben',
-    ctaSecondary: 'Projekte ansehen',
     photoAlt: 'Foto von Eduardo Sette',
     badge: 'Offen für neue Projekte',
     assemblyAlt: 'Animation: Die Teile einer Landingpage fügen sich zu einer Seite zusammen',
@@ -48,7 +46,6 @@ export default {
     eyebrow: 'Ausgewählte Projekte',
     title: 'Seiten, die schon für jemanden arbeiten.',
     intro: 'Jedes Projekt beginnt mit dem Ziel des Kunden: gefunden werden, Vertrauen schaffen, Anfragen gewinnen.',
-    live: 'Live ansehen',
     items: {
       gabbe: {
         name: 'Gabbe',
@@ -88,20 +85,13 @@ export default {
   footer: {
     rights: 'Alle Rechte vorbehalten.',
   },
-  teaser: {
-    label: 'Landingpage-Templates',
-    soon: 'Demnächst',
-    close: 'Template-Hinweis schließen',
-  },
   templates: {
     eyebrow: 'Template-Shop',
     title: 'Templates, bereit zum Start.',
     intro:
       'Ich entwickle Landingpage-Templates mit derselben Sorgfalt wie meine Maßanfertigungen. Lass dich benachrichtigen und sei beim Start dabei.',
     soon: 'Demnächst',
-    notify: 'Benachrichtige mich',
     buy: 'Kaufen',
-    back: 'Zur Startseite',
     priceSoon: 'Preis zum Start',
     items: {
       atelier: { name: 'Atelier', category: 'Portfolio für Kreative' },
@@ -115,7 +105,6 @@ export default {
   },
   whatsapp: {
     hello: 'Hallo Eduardo! Ich habe dein Portfolio gesehen und möchte über eine Landingpage sprechen.',
-    notify: 'Hallo Eduardo! Sag mir bitte Bescheid, wenn das Template {name} erscheint.',
     aria: 'Eduardo per WhatsApp schreiben',
   },
 };

@@ -34,7 +34,7 @@ export default function Header() {
   useEffect(() => {
     document.documentElement.classList.toggle('is-locked', open);
     // Com o menu aberto, o resto da página fica inerte (o Tab não sai do menu).
-    const behind = document.querySelectorAll('.header, main, .footer, .wa-float, .teaser-wrap');
+    const behind = document.querySelectorAll('.header, main, .footer');
     behind.forEach(el => (el.inert = open));
     if (!open) {
       if (wasOpen.current) burgerRef.current?.focus();

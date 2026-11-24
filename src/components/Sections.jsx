@@ -41,9 +41,7 @@ export function Work() {
                   <p className="card__type">{t(`work.items.${p.id}.type`)}</p>
                   <p className="card__desc">{t(`work.items.${p.id}.desc`)}</p>
                 </div>
-                <span className="card__live">
-                  {t('work.live')} <ArrowIcon width="12" height="12" />
-                </span>
+                <ArrowIcon className="card__arrow" width="22" height="22" />
               </div>
             </a>
           ))}
@@ -82,7 +80,7 @@ export function About() {
           <div className="about__text" data-reveal>
             <figure className="about__me">
               <span className="about__arch">
-                <img src={img('perfil.png')} alt={t('hero.photoAlt')} width="375" height="666" loading="lazy" />
+                <img src={img('eduardo.jpg')} alt={t('hero.photoAlt')} width="640" height="640" loading="lazy" />
               </span>
               <figcaption>
                 <strong>Eduardo Sette</strong>

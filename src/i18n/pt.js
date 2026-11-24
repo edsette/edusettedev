@@ -20,8 +20,6 @@ export default {
     eyebrow: 'Eduardo Sette · Landing pages',
     title: 'Landing pages que vendem. Feitas à mão, aceleradas por IA.',
     sub: 'Desenho e desenvolvo páginas rápidas, bonitas e pensadas para transformar visitas em clientes — com o apoio das melhores ferramentas de inteligência artificial.',
-    ctaPrimary: 'Falar no WhatsApp',
-    ctaSecondary: 'Ver trabalhos',
     photoAlt: 'Foto de Eduardo Sette',
     badge: 'Agenda aberta para novos projetos',
     assemblyAlt: 'Animação: as partes de uma landing page se juntam e formam a página',
@@ -48,7 +46,6 @@ export default {
     eyebrow: 'Trabalhos selecionados',
     title: 'Páginas que já estão trabalhando por alguém.',
     intro: 'Cada projeto nasce do objetivo do cliente: ser encontrado, passar confiança e gerar contato.',
-    live: 'Ver ao vivo',
     items: {
       gabbe: {
         name: 'Gabbe',
@@ -88,20 +85,13 @@ export default {
   footer: {
     rights: 'Todos os direitos reservados.',
   },
-  teaser: {
-    label: 'Templates de landing page',
-    soon: 'Em breve',
-    close: 'Fechar aviso de templates',
-  },
   templates: {
     eyebrow: 'Loja de templates',
     title: 'Templates prontos para lançar.',
     intro:
       'Estou preparando modelos de landing page com o mesmo cuidado dos projetos sob medida. Peça para ser avisado e garanta o lançamento.',
     soon: 'Em breve',
-    notify: 'Quero ser avisado',
     buy: 'Comprar',
-    back: 'Voltar ao início',
     priceSoon: 'Preço no lançamento',
     items: {
       atelier: { name: 'Atelier', category: 'Portfólio para criativos' },
@@ -115,7 +105,6 @@ export default {
   },
   whatsapp: {
     hello: 'Olá, Eduardo! Vi seu portfólio e quero conversar sobre uma landing page.',
-    notify: 'Olá, Eduardo! Quero ser avisado quando o template {name} for lançado.',
     aria: 'Falar com Eduardo no WhatsApp',
   },
 };

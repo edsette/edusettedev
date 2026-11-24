@@ -6,7 +6,6 @@ import Header from './components/Header.jsx';
 import Hero from './components/Hero.jsx';
 import BigNav from './components/BigNav.jsx';
 import { About, Contact, Footer, Work } from './components/Sections.jsx';
-import { TemplatesTeaser, WhatsAppFloat } from './components/Floating.jsx';
 import Templates from './pages/Templates.jsx';
 
 function Home() {
@@ -29,8 +28,8 @@ function NotFound() {
       <div>
         <h1 style={{ fontSize: 'clamp(2.4rem, 6vw, 4.4rem)', color: 'var(--olive)' }}>{t('notFound.title')}</h1>
         <p style={{ marginTop: 28 }}>
-          <Link className="btn btn--olive" to={`/${lang}/`}>
-            <span>{t('notFound.back')}</span>
+          <Link className="text-link" to={`/${lang}/`}>
+            ← {t('notFound.back')}
           </Link>
         </p>
       </div>
@@ -54,8 +53,6 @@ function Shell() {
       <Header />
       {page === 'home' ? <Home /> : page === 'templates' ? <Templates /> : <NotFound />}
       <Footer />
-      {page === 'home' && <TemplatesTeaser />}
-      <WhatsAppFloat />
     </>
   );
 }

@@ -20,8 +20,6 @@ export default {
     eyebrow: 'Eduardo Sette · Landing pages',
     title: 'Landing pages that sell. Handcrafted, accelerated by AI.',
     sub: 'I design and build fast, beautiful pages made to turn visitors into customers, backed by the best artificial intelligence tools.',
-    ctaPrimary: 'Chat on WhatsApp',
-    ctaSecondary: 'See my work',
     photoAlt: 'Photo of Eduardo Sette',
     badge: 'Booking new projects',
     assemblyAlt: 'Animation: the parts of a landing page come together to form the page',
@@ -48,7 +46,6 @@ export default {
     eyebrow: 'Selected work',
     title: 'Pages already working for someone.',
     intro: 'Every project starts from the client’s goal: get found, build trust and bring in leads.',
-    live: 'View live',
     items: {
       gabbe: {
         name: 'Gabbe',
@@ -88,20 +85,13 @@ export default {
   footer: {
     rights: 'All rights reserved.',
   },
-  teaser: {
-    label: 'Landing page templates',
-    soon: 'Coming soon',
-    close: 'Dismiss templates notice',
-  },
   templates: {
     eyebrow: 'Template shop',
     title: 'Templates ready to launch.',
     intro:
       'I’m crafting landing page templates with the same care as my custom projects. Ask to be notified and be first in line at launch.',
     soon: 'Coming soon',
-    notify: 'Notify me',
     buy: 'Buy',
-    back: 'Back to home',
     priceSoon: 'Price at launch',
     items: {
       atelier: { name: 'Atelier', category: 'Portfolio for creatives' },
@@ -115,7 +105,6 @@ export default {
   },
   whatsapp: {
     hello: 'Hi Eduardo! I saw your portfolio and would like to talk about a landing page.',
-    notify: 'Hi Eduardo! Please let me know when the {name} template launches.',
     aria: 'Chat with Eduardo on WhatsApp',
   },
 };

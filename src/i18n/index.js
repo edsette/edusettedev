@@ -10,7 +10,7 @@ const DICTS = { pt, es, en, it, de };
 
 const lookup = (dict, key) => key.split('.').reduce((node, part) => (node == null ? node : node[part]), dict);
 
-// t('hero.title') ou t('whatsapp.notify', { name: 'Brasa' }). Chave ausente → '' (nunca cai em outro idioma).
+// t('hero.title') ou t('texto.com.{var}', { var: 'x' }). Chave ausente → '' (nunca cai em outro idioma).
 export function translate(lang, key, vars) {
   const value = lookup(DICTS[lang], key);
   if (typeof value !== 'string') {

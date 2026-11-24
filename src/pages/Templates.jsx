@@ -1,7 +1,7 @@
 import { useRef } from 'react';
-import { Link, useRoute } from '../router.jsx';
+import { Contact } from '../components/Sections.jsx';
 import { useT } from '../i18n/index.js';
-import { TEMPLATES, waLink } from '../data.js';
+import { TEMPLATES } from '../data.js';
 import TemplatePreview from '../components/TemplatePreview.jsx';
 import { ArrowIcon } from '../components/Icons.jsx';
 import useReveal from '../hooks/useReveal.js';
@@ -22,13 +22,9 @@ function TemplateCard({ item }) {
         <p className="tpl-card__cat">{t(`templates.items.${item.id}.category`)}</p>
         <div className="tpl-card__foot">
           <span className="tpl-card__price">{item.price ?? t('templates.priceSoon')}</span>
-          {forSale ? (
-            <a className="btn btn--olive" href={item.gumroadUrl} target="_blank" rel="noopener">
-              <span>{t('templates.buy')}</span> <ArrowIcon />
-            </a>
-          ) : (
-            <a className="btn btn--olive" href={waLink(t('whatsapp.notify', { name }))} target="_blank" rel="noopener">
-              <span>{t('templates.notify')}</span>
+          {forSale && (
+            <a className="tpl-card__buy" href={item.gumroadUrl} target="_blank" rel="noopener">
+              {t('templates.buy')} <ArrowIcon width="14" height="14" />
             </a>
           )}
         </div>
@@ -38,7 +34,6 @@ function TemplateCard({ item }) {
 }
 
 export default function Templates() {
-  const { lang } = useRoute();
   const t = useT();
   const ref = useRef(null);
   useReveal(ref, { stagger: 0.1 });
@@ -46,9 +41,6 @@ export default function Templates() {
   return (
     <main ref={ref}>
       <section className="tpl-hero container" aria-labelledby="tpl-title">
-        <Link className="tpl-back" to={`/${lang}/`} data-reveal>
-          ← {t('templates.back')}
-        </Link>
         <p className="eyebrow" data-reveal>
           {t('templates.eyebrow')}
         </p>
@@ -62,6 +54,7 @@ export default function Templates() {
           <TemplateCard key={item.id} item={item} />
         ))}
       </section>
+      <Contact />
     </main>
   );
 }
