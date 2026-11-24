@@ -2,7 +2,7 @@ import { motion } from 'motion/react';
 import SplitText from '../reactbits/SplitText.jsx';
 import { useRoute } from '../router.jsx';
 import { useT } from '../i18n/index.js';
-import { img } from '../data.js';
+import Monogram3D from './Monogram3D.jsx';
 import PageAssembly from './PageAssembly.jsx';
 
 const rise = delay => ({
@@ -20,7 +20,7 @@ export default function Hero() {
       <div className="container hero__inner">
         <div>
           <motion.p className="hero__who" {...rise(0.1)}>
-            <img className="hero__avatar" src={img('eduardo.jpg')} alt={t('hero.photoAlt')} width="56" height="56" />
+            <Monogram3D size={68} />
             <span className="eyebrow">{t('hero.eyebrow')}</span>
           </motion.p>
           <div id="hero-title">

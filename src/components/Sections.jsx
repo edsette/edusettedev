@@ -80,7 +80,7 @@ export function About() {
           <div className="about__text" data-reveal>
             <figure className="about__me">
               <span className="about__arch">
-                <img src={img('eduardo.jpg')} alt={t('hero.photoAlt')} width="640" height="640" loading="lazy" />
+                <img src={img('eduardo-recorte.webp')} alt={t('hero.photoAlt')} width="900" height="957" loading="lazy" />
               </span>
               <figcaption>
                 <strong>Eduardo Sette</strong>
