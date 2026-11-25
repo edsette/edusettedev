@@ -6,7 +6,7 @@ import { useT } from '../i18n/index.js';
 gsap.registerPlugin(useGSAP);
 
 // "Vista explodida" de uma landing page: as camadas começam soltas em 3D, com etiquetas,
-// e se encaixam formando a página. Passar o mouse (ou tocar) abre de novo.
+// e se encaixam formando a página; depois abrem de novo, em loop. Mouse em cima (ou toque) pausa.
 // x/y em % do tamanho da própria camada; z em px.
 const LAYERS = [
   { id: 'base', z: 0, x: 0, y: 0 },
@@ -26,6 +26,7 @@ export default function PageAssembly() {
   const t = useT();
   const root = useRef(null);
   const tl = useRef(null);
+  const hovering = useRef(false);
 
   useGSAP(
     () => {
@@ -38,13 +39,22 @@ export default function PageAssembly() {
         LAYERS.forEach(l => gsap.set(q(`[data-layer="${l.id}"]`), { z: l.z, xPercent: l.x, yPercent: l.y }));
         gsap.set(q('.asm__tag'), { autoAlpha: 1 });
 
+        // Monta, segura, abre de novo, segura... em loop (yoyo), com pausa entre cada fase.
         tl.current = gsap
-          .timeline({ delay: 1.1, defaults: { ease: 'expo.inOut', duration: 1.6 } })
+          .timeline({ delay: 1.1, repeat: -1, yoyo: true, repeatDelay: 2.2, defaults: { ease: 'expo.inOut', duration: 1.6 } })
           .to(q('.asm__tag'), { autoAlpha: 0, duration: 0.5, stagger: 0.04, ease: 'power2.out' }, 0.5)
           .to(q('[data-layer]'), { z: 0, xPercent: 0, yPercent: 0, stagger: { each: 0.07, from: 'end' } }, 0.2)
           .to(page, { ...FLAT_VIEW, duration: 1.9 }, 0.35)
           .fromTo(q('.asm__glow'), { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.8, ease: 'power2.out' }, '-=0.5');
+
+        // Fora da tela não gasta processamento.
+        const io = new IntersectionObserver(([e]) => {
+          if (!tl.current) return;
+          if (e.isIntersecting) { if (!hovering.current) tl.current.resume(); } else tl.current.pause();
+        });
+        io.observe(root.current);
         if (import.meta.env.DEV) window.__asm = tl.current; // só para inspeção local
+        return () => io.disconnect();
       });
 
       mm.add('(prefers-reduced-motion: reduce)', () => {
@@ -57,23 +67,16 @@ export default function PageAssembly() {
     { scope: root }
   );
 
-  // Abre (inverte a montagem) ao passar o mouse; monta de novo ao sair.
-  const explode = () => {
-    const a = tl.current;
-    if (!a) return;
-    a.timeScale(1.6).reverse();
+  // Mouse em cima (ou toque) congela o loop onde estiver, para olhar com calma.
+  const hold = () => {
+    hovering.current = true;
+    tl.current?.pause();
   };
-  const assemble = () => {
-    const a = tl.current;
-    if (!a) return;
-    a.timeScale(1).play();
+  const release = () => {
+    hovering.current = false;
+    tl.current?.resume();
   };
-  const toggle = () => {
-    const a = tl.current;
-    if (!a) return;
-    if (a.reversed() || a.progress() < 1) assemble();
-    else explode();
-  };
+  const toggle = () => (hovering.current ? release() : hold());
 
   return (
     <div
@@ -81,8 +84,8 @@ export default function PageAssembly() {
       ref={root}
       role="img"
       aria-label={t('hero.assemblyAlt')}
-      onPointerEnter={e => e.pointerType === 'mouse' && explode()}
-      onPointerLeave={e => e.pointerType === 'mouse' && assemble()}
+      onPointerEnter={e => e.pointerType === 'mouse' && hold()}
+      onPointerLeave={e => e.pointerType === 'mouse' && release()}
       onPointerUp={e => e.pointerType !== 'mouse' && toggle()}
     >
       <div className="asm__page">

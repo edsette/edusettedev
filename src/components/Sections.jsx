@@ -6,6 +6,7 @@ import { useT } from '../i18n/index.js';
 import { PROJECTS, SOCIAL, img, waLink } from '../data.js';
 import { ArrowIcon, WhatsAppIcon } from './Icons.jsx';
 import useReveal from '../hooks/useReveal.js';
+import ProcessCarousel from './ProcessCarousel.jsx';
 
 export function Work() {
   const t = useT();
@@ -56,7 +57,6 @@ export function About() {
   const t = useT();
   const ref = useRef(null);
   useReveal(ref);
-  const steps = [1, 2, 3, 4];
 
   return (
     <section className="about" id="sobre" ref={ref} aria-labelledby="about-title">
@@ -94,18 +94,7 @@ export function About() {
             <p>{t('about.p2')}</p>
           </div>
           <div data-reveal>
-            <h3 className="about__process">{t('about.processTitle')}</h3>
-            <ol className="about__steps">
-              {steps.map(n => (
-                <li key={n}>
-                  <b>0{n}</b>
-                  <div>
-                    <strong>{t(`about.step${n}Title`)}</strong>
-                    <span>{t(`about.step${n}Text`)}</span>
-                  </div>
-                </li>
-              ))}
-            </ol>
+            <ProcessCarousel />
           </div>
         </div>
       </div>

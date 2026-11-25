@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { RouterProvider, Link, useRoute } from './router.jsx';
 import { useT } from './i18n/index.js';
 import { HTML_LANG, saveLang } from './lang.js';
@@ -7,10 +7,13 @@ import Hero from './components/Hero.jsx';
 import BigNav from './components/BigNav.jsx';
 import { About, Contact, Footer, Work } from './components/Sections.jsx';
 import Templates from './pages/Templates.jsx';
+import usePageFlow from './hooks/usePageFlow.js';
 
 function Home() {
+  const ref = useRef(null);
+  usePageFlow(ref);
   return (
-    <main>
+    <main ref={ref}>
       <Hero />
       <BigNav />
       <Work />
